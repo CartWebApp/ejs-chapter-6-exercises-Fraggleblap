@@ -8,6 +8,13 @@ Give the class a static from method that takes an iterable object as argument an
 
 class Group {
     // Your code here.
+    constructor(input) {
+      this.input += input;
+    }
+
+    has(checkInput) {
+      return(this.indexOf(checkInput));
+    }
   }
   
 
