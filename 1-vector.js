@@ -5,6 +5,24 @@
 // Add a getter property length to the prototype that computes the length of the vector—that is, the distance of the point (x, y) from the origin (0, 0).
 
 // Your code here.
+let vecMap = {};
+
+class Vec {
+    constructor(x1, y1) {
+        vecMap = {
+            x: x1,
+            y: y1
+        };
+    }
+    plus(x1, y1) {
+        vecMap.set("x", x+x1);
+        vecMap.set("y", y+y1);
+    }
+    minus(x1, y1) {
+        vecMap.set("x", x-x1);
+        vecMap.set("y", y-y1);
+    }
+}
 
 
 // Tests:
