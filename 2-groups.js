@@ -9,17 +9,24 @@ Give the class a static from method that takes an iterable object as argument an
 class Group {
     // Your code here.
     constructor(input) {
-      this.input += input;
+      
+    }
+
+    from(input) {
+      for (let i = 0; i < input.length-1;i++) {
+        this.groupArray += input[i];
+      }
+      return (this.groupArray);
     }
 
     has(checkInput) {
-      return(this.indexOf(checkInput));
+      return(this.groupArray.includes(checkInput));
     }
   }
   
 
   // Tests:
-  let group = Group.from([10, 20]);
+  let group = new Group().from([10, 20]);
   console.log(group.has(10));
   // → true
   console.log(group.has(30));
